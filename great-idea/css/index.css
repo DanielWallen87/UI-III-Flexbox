@@ -72,7 +72,7 @@ body {
 .container {
 	width: 900px;
 	margin: 0 auto;
-	border: 1px solid red;
+	border: 1px solid black;
 	background: white;
 }
 
@@ -182,7 +182,13 @@ hr {
 	text-align: center;
 }
 
+.services-header-img {
+	width: 100%;
+	border: 0px solid black;
+}
+
 .servHead {
+	margin-left: 15px;
 	font-size: 30px;
 }
 
@@ -200,6 +206,10 @@ hr {
 	margin: 20px;
 }
 
+.service-card h2, p {
+	margin: 15px;
+}
+
 .service-card btn {
 	text-align: center;
 	background: white;
@@ -211,10 +221,6 @@ hr {
 
 .service-card btn:hover {
 	cursor: pointer;
-}
-
-.service-card p, h2 {
-	margin: 10px;
 }
 
 .facts {
@@ -252,4 +258,38 @@ hr {
 .serve-end {
 	text-align: center;
 	margin-bottom: 40px; 
+}
+
+/* Mobile friendly CSS rules added 07/11 */
+
+@media screen and (max-width: 600px) {
+
+	.service-boxes, .facts {
+		flex-direction: column;
+	}
+
+	.serve-end {
+		text-align: left;
+	}
+
+	/* The top media query is the only one I could get
+	to behave correctly. Leaving the rest in case you
+	have any feedback for how to improve. Giving up on
+	debugging this for now since there's other stuff
+	that's probably more important to understand for
+	tomorrow's sprint 
+	
+	In retrospect, getting 2/3 of the page to behave
+	correctly with two lines of code should be seen as
+	a win I suppose... will figure out the top 1/3
+	at a later date. :) */
+
+	.open-para {
+		max-width: 100%;
+	}
+
+	.header {
+		justify-content: flex-start;
+		max-width: 100%;
+	}
 }
