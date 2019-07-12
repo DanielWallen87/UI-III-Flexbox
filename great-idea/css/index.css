@@ -268,28 +268,29 @@ hr {
 		flex-direction: column;
 	}
 
+	.logo {
+		order: -1;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	header nav {
+		margin-left: -20px;
+		font-size: 14px;
+	}
+
 	.serve-end {
 		text-align: left;
 	}
 
-	/* The top media query is the only one I could get
-	to behave correctly. Leaving the rest in case you
-	have any feedback for how to improve. Giving up on
-	debugging this for now since there's other stuff
-	that's probably more important to understand for
-	tomorrow's sprint 
-	
-	In retrospect, getting 2/3 of the page to behave
-	correctly with two lines of code should be seen as
-	a win I guess... will figure out the top 1/3
-	at a later date. :) */
-
 	.open-para {
-		max-width: 100%;
+		width: 50%;
 	}
 
-	.header {
-		justify-content: flex-start;
-		max-width: 100%;
-	}
+	/* Nevermind the previous rant, stubborn persistence 
+	got the job done */
+
+	
 }
